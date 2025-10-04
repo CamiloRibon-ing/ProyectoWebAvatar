@@ -1,0 +1,337 @@
+/* ==== Variables globales ==== */
+:root {
+  --bg-light: #F9F7F4;
+  --white: #FFFFFF;
+  --text-dark: #1C1C1C;
+  --accent: #B68D56;
+}
+
+/* ==== Reset ==== */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+body { background:var(--bg-light); color:var(--text-dark); line-height:1.5; overflow-x:hidden; }
+
+/* ==== Preloader ==== */
+#preloader {
+  position:fixed; inset:0; background:#fff;
+  display:flex; justify-content:center; align-items:center; z-index:10000;
+}
+.spinner {
+  width:50px; height:50px;
+  border:5px solid #ddd; border-top:5px solid var(--accent);
+  border-radius:50%; animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ==== Navbar ==== */
+.navbar {
+  position:fixed; top:0; left:0; right:0;
+  background:rgba(255,255,255,0.95);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:0.6rem 1.5rem; box-shadow:0 4px 10px rgba(0,0,0,0.05);
+  z-index:1000;
+}
+.logo { height:45px; }
+.menu-toggle { display:none; font-size:1.6rem; background:none; border:none; cursor:pointer; }
+.nav-links { list-style:none; display:flex; gap:1.5rem; }
+.nav-links a { text-decoration:none; color:var(--text-dark); font-weight:500; }
+.nav-links a:hover, .nav-links a.active { color:var(--accent); }
+
+/* Responsive Navbar */
+@media(max-width:768px){
+  .menu-toggle{display:block;}
+  .nav-links{
+    position:absolute; top:100%; right:1rem;
+    flex-direction:column; background:#fff; padding:1rem;
+    border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    display:none;
+  }
+  .nav-links.active{display:flex;}
+}
+
+/* ==== Hero ==== */
+.hero {
+  position:relative; height:80vh; display:flex;
+  justify-content:center; align-items:center; text-align:center;
+  color:#fff; overflow:hidden;
+}
+.hero-video {
+  position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-2;
+}
+.hero .overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+  z-index:-1;
+}
+.hero-content { max-width:800px; padding:2rem; animation:fadeInUp 1s ease; }
+
+/* ==== Socios Principales ==== */
+.socios-section {
+  text-align:center; padding:100px 20px 60px;
+  background:var(--bg-light);
+}
+.socios-section h2 { color:var(--accent); margin-bottom:40px; }
+.socios-container {
+  display:flex; justify-content:center; flex-wrap:wrap; gap:40px;
+}
+.socio-card {
+  background:var(--white); border-radius:15px; width:320px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  transition:transform .3s, box-shadow .3s;
+  padding:1rem;
+}
+.socio-card img { width:100%; border-radius:12px; }
+.socio-card:hover { transform:translateY(-8px); box-shadow:0 10px 25px rgba(0,0,0,0.15); }
+.socio-bar {
+  width:60px; height:4px; background:var(--accent);
+  margin:10px auto 20px; border-radius:2px;
+}
+/* ==== Carrusel Empresas ==== */
+.empresas-section {
+  position: relative;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--accent), #a6783c);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empresas-carousel {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+  width: 90%;
+  scroll-behavior: smooth;
+}
+
+.empresa-card {
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 1.2rem;
+  transition: transform 0.5s ease, background 0.3s ease;
+  flex-shrink: 0;
+  text-align: center;
+}
+.empresa-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* ==== Imagen dentro del card de empresa ==== */
+/* ==== Imagen (logo) dentro del card de empresa ==== */
+/* ==== Imagen (logo) dentro del card de empresa con efecto dorado animado ==== */
+/* ==== Imagen (logo) dentro del card de empresa con efecto dorado animado ==== */
+/* ==== Imagen (logo redondo centrado con sombra elegante) ==== */
+.empresa-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;             /* forma circular */
+  object-fit: cover;              /* mantiene proporciones */
+  display: block;
+  margin: 0 auto 14px auto;       /* centra la imagen */
+  background: #fff;
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover en PC */
+.empresa-card img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* ==== Texto debajo del logo ==== */
+.empresa-card h3 {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.empresa-card p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+/* ======== Adaptación móvil ======== */
+@media (max-width: 768px) {
+  .empresa-card img {
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .empresa-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .empresa-card p {
+    font-size: 0.9rem;
+    max-width: 220px;
+  }
+}
+
+
+
+
+
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--white);
+  color: var(--accent);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+.carousel-btn:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* ==== Efecto video scroll ==== */
+.hero-video.blur {
+  filter: blur(8px) brightness(0.8);
+  transition: filter 0.4s ease;
+}
+
+/* ==== Responsividad ==== */
+@media(max-width:768px){
+  .empresa-card { min-width: 240px; }
+  .carousel-btn { width: 36px; height: 36px; font-size: 1rem; }
+}
+
+/* ==== Footer ==== */
+/* ==== Footer Moderno ==== */
+.footer {
+  background: linear-gradient(135deg, var(--accent), #a6783c);
+  color: var(--white);
+  padding: 50px 20px;
+  margin-top: 60px;
+  text-align: center;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+}
+
+/* Contenedor principal */
+.footer-container {
+  max-width: var(--container-width);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Logo */
+.footer-brand {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-brand img {
+  height: 70px;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));
+}
+
+/* Información */
+.footer-info {
+  flex: 1 1 100%;
+  text-align: center;
+}
+.footer-info p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Redes sociales */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+}
+.social-icons a {
+  font-size: 1.4rem;
+  color: white;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
+}
+.social-icons a:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+.social-icons a[href*="whatsapp"]:hover { background: #25D366; }
+.social-icons a[href*="instagram"]:hover { background: #E1306C; }
+.social-icons a[href*="facebook"]:hover { background: #1877F2; }
+
+/* ==== Adaptación móvil mejorada ==== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-brand img {
+    height: 60px;
+    margin-bottom: 8px;
+  }
+
+  .footer-info p {
+    font-size: 0.9rem;
+  }
+
+  .social-icons a {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+}
+
+/* ==== Animaciones ==== */
+@keyframes fadeInUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
+.fade-up { opacity:0; transform:translateY(40px); transition: all 0.8s ease; }
+.fade-up.show { opacity:1; transform:translateY(0); }
+
+/* ==== Responsividad ==== */
+@media(max-width:768px){
+  .socio-card { width:90%; }
+  .carousel-btn { width:38px; height:38px; font-size:1rem; }
+}

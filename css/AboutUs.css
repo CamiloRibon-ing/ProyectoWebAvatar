@@ -1,0 +1,314 @@
+/* ==== Tipografía moderna ==== */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ==== Paleta estilo Proyecto1 ==== */
+:root {
+  --bg-light: #F9F7F4;        /* arena claro */
+  --bg-white: #FFFFFF;
+  --text-dark: #1C1C1C;
+  --text-muted: #555;
+  --accent: #B68D56;          /* dorado arena */
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* ==== Reset ==== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ---------- Preloader ---------- */
+#preloader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--white);z-index:9999;transition:opacity .4s ease}
+#preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.preloader-logo img{width:150px;animation:pulse 3s infinite ease-in-out}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08);opacity:.75}}
+/* ==== Navbar moderno ==== */
+.navbar {
+  background: var(--bg-white);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar .logo {
+  max-height: 60px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--bg-white);
+    position: absolute;
+    right: 1rem;
+    top: 70px;
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .nav-links.active { display: flex; }
+}
+
+/* ==== Sección Nosotros ==== */
+.nosotros {
+  padding: 100px 20px;
+  background: var(--bg-light);
+}
+.nosotros-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.nosotros-header h2 {
+  font-size: 2.8rem;
+  color: var(--accent);
+}
+.nosotros-header .intro {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+.nosotros-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.nosotros-text {
+  flex: 1 1 500px;
+}
+.nosotros-text h3 {
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.nosotros-text ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+.nosotros-text ul li {
+  margin-bottom: 8px;
+  color: #333;
+}
+.nosotros-image {
+  flex: 1 1 400px;
+}
+.nosotros-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+.nosotros-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ==== Sección Valores ==== */
+.valores-section {
+  padding: 80px 20px;
+  background: var(--bg-white);
+  color: var(--text-dark);
+  text-align: center;
+}
+.valores-header {
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+.valores-header h2 {
+  font-size: 2.4rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+.valor {
+  text-align: left;
+}
+.valor-img {
+  position: relative;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+.valor-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(182, 141, 86, 0.5); /* overlay dorado translúcido */
+}
+.valor-img h3 {
+  position: relative;
+  color: var(--bg-white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 15px;
+  z-index: 1;
+  text-align: center;
+}
+.valor p {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* ==== Equipo ==== */
+.nosotros-equipo {
+  padding: 80px 20px;
+  background: var(--bg-light);
+  text-align: center;
+}
+.nosotros-equipo h3 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--accent);
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+.team-member {
+  background: var(--bg-white);
+  padding: 25px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+.team-member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 3px solid var(--accent);
+}
+.team-member .name {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.team-member .role {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+
+
+/* CTA Button */
+.cta-container {
+  margin-top: 30px;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366; /* Verde WhatsApp */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.5);
+}
+
+.cta-btn i {
+  font-size: 1.4rem;
+}
+
+
+/* ==== Footer moderno ==== */
+.footer {
+  background: var(--accent);
+  padding: 40px 20px;
+  color: var(--bg-white);
+  text-align: center;
+}
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.footer a {
+  color: var(--bg-white);
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==== Animaciones ==== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-left.show, .fade-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}

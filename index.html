@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Fundación Avatar</title>
+
+  <!-- Tipografía moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/Style.css">
+
+  <link rel="icon" href="recursos/Captura_de_pantalla_2025-09-14_140503-removebg-preview.png">
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-logo">
+      <img src="recursos/Captura_de_pantalla_2025-09-14_140503-removebg-preview.png" alt="Fundación Avatar logo">
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar container">
+      <a href="index.html" class="brand">
+        <img src="recursos/Captura_de_pantalla_2025-09-14_140503-removebg-preview.png" alt="Fundación Avatar" class="logo">
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="html/AboutUs.html">¿Quiénes somos?</a></li>
+        <li><a href="html/Services.html">Nuestros Servicios</a></li>
+        <li><a href="html/Proyects.html">Proyectos</a></li>
+        <li><a href="html/Socios.html">Nuestros Aliados</a></li>
+        <li><a href="html/contacts.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO con video -->
+  <main>
+    <section id="inicio" class="hero">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="recursos/videoplayback.mp4" type="video/mp4">
+        Tu navegador no soporta video en HTML5
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">Fundación Avatar</h1>
+        <p class="hero-sub">Impulsando proyectos sociales, ambientales y productivos en la Región Caribe.</p>
+        <div class="hero-cta">
+          <a href="html/Proyects.html" class="btn primary">Ver proyectos</a>
+          <a href="html/AboutUs.html" class="btn ghost">Conócenos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre (pequeña introducción) -->
+    <section id="sobre" class="sobre section fade-up">
+      <div class="container">
+        <div class="sobre-card">
+          <h2><a href="html/AboutUs.html">¿Quiénes somos?</a></h2>
+          <p>La Fundación Avatar es una entidad sin ánimo de lucro (Magangué, Bolívar - 2020) que promueve el desarrollo humano sostenible mediante proyectos sociales, comunitarios, tecnológicos, ambientales, culturales y productivos con énfasis en población vulnerable.</p>
+          <a class="btn outline" href="html/AboutUs.html">Leer más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Misión / Visión -->
+    <section id="mision" class="section mv-section fade-up">
+      <div class="container grid-2">
+        <div class="mv-card">
+          <h3>Misión</h3>
+          <p>Ser una entidad desarrolladora de proyectos sustentables de alto impacto en la región Caribe, facilitando beneficios con cobertura social y formación por competencias.</p>
+        </div>
+        <div class="mv-card">
+          <h3>Visión</h3>
+          <p>Ser líderes en iniciativas de alto impacto social, con reconocimiento por proyectos de calidad que prioricen el beneficio social.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objetivos (lista) -->
+    <section id="objetivos" class="section fade-up">
+      <div class="container">
+        <h2>Objetivos</h2>
+        <ul class="objectives">
+          <li>Impulsar la equidad de género y la inclusión social.</li>
+          <li>Promover la educación y la capacitación formal y no formal.</li>
+          <li>Desarrollar proyectos productivos sostenibles.</li>
+          <li>Fomentar el ecoturismo y la cultura regional.</li>
+          <li>Construir y apoyar vivienda social e infraestructura comunitaria.</li>
+          <li>Aplicar tecnologías apropiadas para el desarrollo territorial.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Proyectos (cards) -->
+    <section id="proyectos" class="section fade-up">
+      <div class="container">
+        <h2>Proyectos</h2>
+        <div class="proyectos-grid">
+          <a href="html/proyecto1.html" class="project-card">
+            <div class="project-media" style="background-image:url('recursos/frenteproyectoavatar2.jpeg')"></div>
+            <div class="project-body">
+              <h3>Apartaestudios Avatar</h3>
+              <p>Vivienda social sostenible y diseños accesibles para la comunidad.</p>
+            </div>
+          </a>
+
+          <a href="html/proyecto1.html" class="project-card">
+            <div class="project-media" style="background-image:url('recursos/piscinas.jpeg')"></div>
+            <div class="project-body">
+              <h3>Glamping Ecológico</h3>
+              <p>Experiencias turísticas sustentables integradas al paisaje.</p>
+            </div>
+          </a>
+
+          <a href="html/proyecto1.html" class="project-card">
+            <div class="project-media" style="background-image:url('recursos/fundacionavatar2.jpeg')"></div>
+            <div class="project-body">
+              <h3>Centro Comunitario</h3>
+              <p>Equipamiento cultural y formación para emprendimiento local.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+<!-- Timeline de Servicios Principales -->
+<section id="servicios-timeline" class="timeline-section fade-up">
+  <div class="container">
+    <h2 class="timeline-title">Nuestros Ejes de Acción</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item left fade-up">
+        <div class="timeline-icon"><i class="fas fa-venus-double"></i></div>
+        <div class="timeline-content">
+          <h3>Inclusión y Equidad de Género</h3>
+          <p>Promovemos la equidad de género y la inclusión de comunidades afrodescendientes, indígenas, raizales, campesinos y víctimas de la violencia.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right fade-up">
+        <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-content">
+          <h3>Educación y Capacitaciones</h3>
+          <p>Impulsamos procesos formales y no formales de educación, con énfasis en la primera infancia y juventudes.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left fade-up">
+        <div class="timeline-icon"><i class="fas fa-heartbeat"></i></div>
+        <div class="timeline-content">
+          <h3>Salud y Bienestar</h3>
+          <p>Trabajamos en salud preventiva, atención a familias en calamidad y programas contra la drogadicción.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right fade-up">
+        <div class="timeline-icon"><i class="fas fa-paint-brush"></i></div>
+        <div class="timeline-content">
+          <h3>Cultura y Patrimonio</h3>
+          <p>Conservamos y promovemos la cultura en todas sus manifestaciones como parte del desarrollo humano sostenible.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left fade-up">
+        <div class="timeline-icon"><i class="fas fa-leaf"></i></div>
+        <div class="timeline-content">
+          <h3>Medio Ambiente y Sostenibilidad</h3>
+          <p>Desarrollamos proyectos de saneamiento ambiental, gestión de desastres y cuidado de los recursos naturales.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right fade-up">
+        <div class="timeline-icon"><i class="fas fa-seedling"></i></div>
+        <div class="timeline-content">
+          <h3>Productividad y Desarrollo Comunitario</h3>
+          <p>Apoyamos la productividad diversa: agricultura, piscicultura, ecoturismo, tecnologías apropiadas y microempresa comunitaria.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Contacto -->
+<section id="contacto" class="contact-section fade-up">
+  <div class="contact-container">
+    <h2>Contactanos</h2>
+    <p class="intro">
+      ¿Tienes un proyecto o quieres conocer más sobre la Fundación Avatar?<br>
+      Estamos aquí para escucharte.
+    </p>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:fundacionavatar@gmail.com">fundacionavatar@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/573206527795" target="_blank">+57 320-652-7795</a>
+      </div>
+    </div>
+
+    <a href="https://wa.me/573206527795" target="_blank" class="btn-whatsapp">
+      <i class="fab fa-whatsapp"></i> Escríbenos ahora
+    </a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <!-- FOOTER -->
+  <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container container">
+    <!-- Logo -->
+    <div class="footer-brand">
+      <img src="recursos/Captura_de_pantalla_2025-09-14_140503-removebg-preview.png" 
+           alt="Logo Fundación Avatar" class="footer-logo">
+    </div>
+
+    <!-- Info -->
+    <div class="footer-info">
+      <p>&copy; 2025 Fundación Avatar</p>
+      <p>Magangué, Bolívar — Colombia</p>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="social-icons">
+      <a href="https://wa.me/573044952240" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/luni_hairclips" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/share/1A2YYmo2e3/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

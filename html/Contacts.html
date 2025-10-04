@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contáctanos - Fundación Avatar</title>
+  <link rel="stylesheet" href="/css/Contacts.css" />
+  <link rel="icon" href="/recursos/Captura_de_pantalla_2025-09-14_140503-removebg-preview.png" />
+  <script src="https://kit.fontawesome.com/a2e0e9d6f2.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ 
+
+  <!-- Tipografía moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/Style.css">
+
+  <link rel="icon" href="/recursos/Captura_de_pantalla_2025-09-14_140503-removebg-preview.png">
+  <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header>
+    <nav class="navbar">
+      <a href="/index.html" class="brand">
+        <img src="/recursos/Captura_de_pantalla_2025-09-14_140503-removebg-preview.png" alt="Fundación Avatar" class="logo">
+      </a>
+      <button class="menu-toggle" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/html/AboutUs.html">¿Quiénes somos?</a></li>
+        <li><a href="/html/Services.html">Servicios</a></li>
+        <li><a href="/html/Proyects.html">Proyectos</a></li>
+        <li><a href="/html/Socios.html">Entidades Afiliadas</a></li>
+        <li><a href="/html/Contacts.html" class="active">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Contact Section ===== -->
+  
+  <!-- ===== CONTACT HERO ===== -->
+<section class="contact-hero">
+  <video autoplay muted loop playsinline class="contact-video">
+    <source src="/recursos/sociosfondo2.mp4" type="video/mp4">
+  </video>
+  <div class="contact-overlay"></div>
+
+  <div class="contact-container fade-up">
+    <h2>Conecta con nosotros</h2>
+    <p>Tu voz puede ayudar a transformar vidas. Cuéntanos tus ideas, propuestas o inquietudes y te responderemos muy pronto.</p>
+    
+    <form id="contact-form" class="contact-form glass">
+  <input type="text" name="name" placeholder="Tu nombre completo" required>
+  <input type="email" name="email" placeholder="Escribe tu correo electrónico" required>
+  <input type="text" name="subject" placeholder="Asunto" required>
+  <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+  <button type="submit" class="btn primary"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+</form>
+
+  </div>
+</section>
+
+<!-- Contenedor para alertas -->
+<div id="alert-box" class="alert-box"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="/js/contacts.js"></script>
+
+
+  <!-- ===== WhatsApp Floating Button ===== -->
+  <a href="https://wa.me/573206527795" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-brand">
+        <img src="/recursos/Captura_de_pantalla_2025-09-14_140503-removebg-preview.png" alt="Logo Fundación Avatar" class="footer-logo">
+      </div>
+      <div class="footer-info">
+        <p>&copy; 2025 Fundación Avatar</p>
+        <p>Magangué, Bolívar — Colombia</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://wa.me/573206527795" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/luni_hairclips" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1A2YYmo2e3/" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
